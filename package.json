@@ -7,7 +7,9 @@
     "start": "node .",
     "setup": "configure-env",
     "pretest": "cross-env NODE_ENV=test",
-    "test": "eslint . && mocha test",
+    "test": "mocha test/**/*.test.js --exit",
+    "test:watch": "mocha test/**/*.test.js --watch",
+    "test:coverage": "nyc mocha test/**/*.test.js",
     "dev": "nodemon ."
   },
   "description": "Node implementation of Appointment Reminders",
@@ -35,7 +37,7 @@
     "body-parser": "^1.19.0",
     "configure-env": "^1.0.0",
     "cookie-parser": "~1.4.3",
-    "cron": "^1.1.0",
+    "cron": "^1.8.2",
     "debug": ">=2.6.9",
     "dotenv-safe": "^4.0.4",
     "express": "^4.17.1",
@@ -49,17 +51,19 @@
     "twilio": "^3.37.1"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "cheerio": "^0.22.0",
+    "chai": "^4.3.4",
     "cross-env": "^6.0.3",
     "eslint": "^6.6.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^6.6.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "mocha": "^6.2.2",
+    "mocha": "^9.1.3",
+    "mongodb-memory-server": "^8.12.2",
+    "mongoose": "^6.0.12",
     "nodemon": "^1.19.4",
+    "nyc": "^15.1.0",
     "prettier": "^1.19.1",
-    "proxyquire": "^1.7.10",
-    "supertest": "^2.0.1"
+    "sinon": "^12.0.1",
+    "supertest": "^6.1.6"
   }
 }
