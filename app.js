@@ -18,6 +18,6 @@ server.listen(cfg.port, '0.0.0.0', function() {
     }
   }
   console.log(
-    `Starting sample-appointment-reminders at http://${localIp}:${cfg.port}`
+    `Starting appointment-reminders at http://${localIp}:${cfg.port}`
   );
 });
